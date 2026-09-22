@@ -1,0 +1,53 @@
+import java.util.Scanner;
+public class Main { 
+    public static void main(String[] args) { 
+        System.out.println("Hello, World"); 
+   
+        int age = 20; 
+        double price = 30.20; 
+        float weight = 51.6f; 
+        char grade = 'A'; 
+        boolean isStudent = true; 
+        String name = "Alice"; 
+        
+        System.out.println("Name: " + name); 
+        System.out.println("Age: " + age); 
+        System.out.println("Price: " + price); 
+        System.out.println("Weight: " + weight); 
+        System.out.println("Grade: " + grade); 
+        System.out.println("Is Student?: " + isStudent); 
+        
+        Scanner scanner = new Scanner(System.in);
+        //Reading One World (stop at whitespace)
+        System.out.println("\nEnter your city: ");
+        String userCity = scanner.next(); // reads one World
+        System.out.println("You live in: " +userCity);
+        // reading the fulline (including spaces)
+        scanner.nextLine(); // clears leftover newline from previos next()
+        System.out.print("Enter a sentence about your self: ");
+        String fullSentences = scanner.nextLine(); // reads the entire line or paragraph
+        System.out.println("You said: "+fullSentences);
+        scanner.close();
+
+        // Operators and Expression 
+        int a = 10, b = 3;
+        System.out.println("a + b = "+(a+b));
+        System.out.println("a - b = "+(a-b));
+        System.out.println("a * b = "+(a*b));
+        System.out.println("a / b = "+(a/b));
+        System.out.println("a % b = "+(a%b));
+
+        System.out.println("Enter your exam score: ");
+        int Examscore = scanner.nextInt();
+        if (Examscore >=90){
+            System.out.println("Grade: A");
+        } else if (Examscore >=80){
+            System.out.println("Grade: B");
+        } else if (Examscore >=70){
+            System.out.println("Grade: C");
+        } else{ 
+            System.out.println("Grade: F");
+        }
+        scanner.close();        
+    } 
+}
